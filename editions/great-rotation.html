@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Rotation: Banks Buy, Hodlers Sell — Kommodo Digital</title>
+    <style>
+        /* ================================
+           KOMMODO DIGITAL — BRAND THEME v2
+           Edition: The Great Rotation
+           ================================ */
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        :root {
+            --bg-primary: #2c2e27;
+            --bg-secondary: #33432f;
+            --accent-primary: #f76400;
+            --accent-secondary: #b24800;
+            --neutral: #575c4f;
+            --pine: #3c6a40;
+            --text-primary: #f5f5f5;
+            --text-secondary: #d0d0d0;
+            --text-muted: #a0a0a0;
+            --bullish: #5eff7d;
+            --bearish: #ff6b6b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* ===== HEADER SECTION ===== */
+        .newsletter-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--neutral);
+        }
+
+        .brand-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .newsletter-type {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .edition-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 30px 0 15px;
+            line-height: 1.2;
+        }
+
+        .edition-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .edition-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ===== SECTION STYLING ===== */
+        .section {
+            margin: 40px 0;
+        }
+
+        .section-header {
+            border-left: 4px solid var(--accent-secondary);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* ===== LTDS FRAMEWORK BADGE ===== */
+        .ltds-badge {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--pine));
+            border: 1px solid var(--pine);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .ltds-badge h4 {
+            color: var(--accent-primary);
+            margin: 0 0 10px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .ltds-badge p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ===== METRIC EDUCATION BOX ===== */
+        .metric-education {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid var(--neutral);
+        }
+
+        .metric-education-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .metric-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .metric-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .metric-subtitle {
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            margin: 3px 0 0;
+        }
+
+        .analogy-bridge {
+            background-color: rgba(247, 100, 0, 0.1);
+            border-left: 3px solid var(--accent-primary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .analogy-bridge h5 {
+            color: var(--accent-primary);
+            margin: 0 0 8px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .analogy-bridge p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* ===== SIGNALS DASHBOARD ===== */
+        .signals-dashboard {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 30px 0;
+            border: 1px solid var(--neutral);
+        }
+
+        .dashboard-header {
+            background-color: var(--pine);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .dashboard-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        table.dashboard {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        table.dashboard th {
+            background-color: rgba(60, 106, 64, 0.5);
+            color: var(--text-secondary);
+            padding: 12px 15px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            font-size: 0.75rem;
+        }
+
+        table.dashboard td {
+            border-bottom: 1px solid var(--neutral);
+            padding: 12px 15px;
+            color: var(--text-primary);
+        }
+
+        table.dashboard tr:last-child td {
+            border-bottom: none;
+        }
+
+        .signal-bullish {
+            background-color: var(--pine);
+            color: var(--bullish);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .signal-bearish {
+            background-color: var(--accent-secondary);
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .signal-neutral {
+            background-color: var(--neutral);
+            color: var(--text-primary);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .signal-caution {
+            background-color: #8B6914;
+            color: #FFD93D;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ===== HALVING CYCLE TRACKER ===== */
+        .cycle-tracker {
+            background: linear-gradient(135deg, var(--bg-secondary), #2a3a26);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid var(--pine);
+        }
+
+        .cycle-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cycle-title {
+            font-weight: 600;
+            color: var(--accent-primary);
+            font-size: 1rem;
+        }
+
+        .cycle-phase {
+            background-color: var(--pine);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--bullish);
+        }
+
+        .cycle-progress {
+            background-color: var(--neutral);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .cycle-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--pine), var(--accent-primary));
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .cycle-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        .cycle-stat {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .cycle-stat-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .cycle-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        /* ===== DCA STRATEGY SECTION ===== */
+        .dca-section {
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid var(--neutral);
+        }
+
+        .dca-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .dca-icon {
+            font-size: 1.5rem;
+        }
+
+        .dca-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .strategy-card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid var(--neutral);
+        }
+
+        .strategy-card.caution {
+            border-color: var(--accent-secondary);
+        }
+
+        .strategy-card.accumulate {
+            border-color: var(--pine);
+        }
+
+        .strategy-timeframe {
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .strategy-action {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .strategy-action.caution {
+            color: var(--bearish);
+        }
+
+        .strategy-action.accumulate {
+            color: var(--bullish);
+        }
+
+        .strategy-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== USD CYCLE AWARENESS ===== */
+        .usd-cycle {
+            background: linear-gradient(135deg, #1a1c18, var(--bg-secondary));
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid var(--neutral);
+        }
+
+        .usd-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .usd-title {
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .usd-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .usd-interpretation {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding: 10px 15px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+        }
+
+        /* ===== CONTENT BLOCKS ===== */
+        .content-block {
+            margin: 25px 0;
+        }
+
+        .content-block h3 {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .content-block p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .content-block ul {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .content-block li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: var(--bg-secondary);
+            border-left: 4px solid var(--accent-primary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        /* ===== VERDICT BOX ===== */
+        .verdict-box {
+            background: linear-gradient(135deg, var(--bg-secondary), rgba(247, 100, 0, 0.1));
+            border: 1px solid var(--accent-primary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .verdict-label {
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .verdict-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .verdict-subtext {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== ALPHA WATCHLIST ===== */
+        .alpha-watchlist {
+            background-color: rgba(247, 100, 0, 0.05);
+            border: 1px solid var(--accent-secondary);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .alpha-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .alpha-title {
+            font-weight: 600;
+            color: var(--accent-primary);
+            font-size: 1rem;
+        }
+
+        .alpha-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--neutral);
+        }
+
+        .alpha-item:last-child {
+            border-bottom: none;
+        }
+
+        .alpha-bullet {
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        .alpha-content {
+            flex: 1;
+        }
+
+        .alpha-metric {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .alpha-detail {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        /* ===== DISCLAIMER ===== */
+        .disclaimer {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .disclaimer h5 {
+            color: var(--accent-secondary);
+            margin: 0 0 10px;
+            font-size: 0.85rem;
+        }
+
+        .disclaimer p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        .newsletter-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--neutral);
+        }
+
+        .footer-brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .footer-tagline {
+            font-size: 0.9rem;
+            color: var(--accent-primary);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-copyright {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .subjectivity-score {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            .edition-title {
+                font-size: 1.8rem;
+            }
+
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cycle-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .edition-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="newsletter-header">
+        <div class="brand-logo">KOMMODO DIGITAL</div>
+        <div class="newsletter-type">The Digital Commodity Newsletter</div>
+
+        <h1 class="edition-title">The Great Rotation: Banks Buy, Hodlers Sell</h1>
+        <p class="edition-subtitle">Gold Inflows vs. Bitcoin Distribution: A Tale of Two Commodities</p>
+
+        <div class="edition-meta">
+            <span class="meta-item">📅 December 11, 2025</span>
+            <span class="meta-item">📊 Edition #001</span>
+            <span class="meta-item">⏱️ 6 min read</span>
+        </div>
+        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">
+            <strong>Data Snapshot:</strong> Glassnode UTC close · Dec 11, 2025
+        </div>
+    </header>
+
+    <!-- ===== LTDS FRAMEWORK BADGE ===== -->
+    <div class="ltds-badge">
+        <h4>⬢ LTDS FRAMEWORK ANALYSIS</h4>
+        <p>Let The Data Speak — Bias-free intelligence at the intersection of Physical Gold and Digital Gold</p>
+    </div>
+
+    <!-- ===== SECTION 1: THE HOOK ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">The Signal</h2>
+            <p class="section-subtitle">A quiet divergence emerges</p>
+        </div>
+
+        <div class="content-block">
+            <p>While the dollar gathers strength (DXY 99.09), a quiet divergence has emerged in the safe-haven arena.</p>
+
+            <p>For the first time in months, we are seeing a distinct <strong>behavioral split</strong>:</p>
+            <ul>
+                <li>The <strong>"Official Sector"</strong> (Central Banks & Institutional Funds) is aggressively bidding the <em>Physical Standard</em> (Gold)</li>
+                <li>The <strong>"Network Sector"</strong> (Miners & Long-Term Hodlers) is distributing the <em>Digital Standard</em> (Bitcoin)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Key Question:</strong> Is this a temporary profit-taking rotation, or a signal that risk-off capital is seeking the safety of the vault over the blockchain?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 2: METRIC EDUCATION ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">This Week's On-Chain Metric</h2>
+            <p class="section-subtitle">Understanding Bitcoin through the lens of gold</p>
+        </div>
+
+        <div class="metric-education">
+            <div class="metric-education-header">
+                <div class="metric-icon">📊</div>
+                <div>
+                    <h3 class="metric-title">Hodler Net Position Change</h3>
+                    <p class="metric-subtitle">Bitcoin On-Chain Metric</p>
+                </div>
+            </div>
+
+            <p><strong>What it measures:</strong> The 30-day net change in Bitcoin held by long-term holders (entities holding for 155+ days). Positive values indicate accumulation; negative values indicate distribution.</p>
+
+            <p><strong>Current reading:</strong> <span style="color: var(--bearish); font-weight: 600;">-154,710 BTC</span> — Long-term holders are net selling into current price strength. This is a significant distribution event.</p>
+
+            <p><strong>Historical context:</strong> Readings below -100k BTC have historically coincided with late-cycle profit-taking phases, often preceding consolidation or correction periods.</p>
+
+            <div class="analogy-bridge">
+                <h5>🪙 Gold Investor's Bridge</h5>
+                <p>"Think of Hodler Net Position like tracking Central Bank gold sales. When the 'strong hands' who rarely sell start reducing positions, it signals they believe current prices offer attractive exit opportunities. In gold terms, this is equivalent to Central Banks net-selling reserves—a rare and noteworthy event."</p>
+            </div>
+        </div>
+
+        <div class="metric-education">
+            <div class="metric-education-header">
+                <div class="metric-icon">⛏️</div>
+                <div>
+                    <h3 class="metric-title">Puell Multiple</h3>
+                    <p class="metric-subtitle">Miner Economics Indicator</p>
+                </div>
+            </div>
+
+            <p><strong>What it measures:</strong> Daily miner revenue divided by the 365-day moving average of daily miner revenue. It indicates whether miners are in profit or stress.</p>
+
+            <p><strong>Current reading:</strong> <span style="color: var(--text-muted); font-weight: 600;">0.97</span> — Miners are operating near their yearly average revenue. <strong>Neutral</strong>; watch for deterioration below 0.8.</p>
+
+            <p><strong>Historical context:</strong> Values below 0.5 have marked generational buying opportunities. Values above 2.0 have signaled euphoric tops. Current reading is neutral.</p>
+
+            <div class="analogy-bridge">
+                <h5>🪙 Gold Investor's Bridge</h5>
+            <p>"Puell Multiple is <em>directionally analogous</em> to margin pressure in gold mining (AISC framing). It's not a cost metric—more a 'revenue heat' gauge versus its own cycle baseline. At 0.97, Bitcoin miners are operating near their historical average—neutral, not stressed."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 3: SIGNALS DASHBOARD ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Signals Dashboard</h2>
+            <p class="section-subtitle">LTDS Framework — Real-time market intelligence</p>
+        </div>
+
+        <div class="signals-dashboard">
+            <div class="dashboard-header">
+                <span class="dashboard-title">📊 Critical Signals</span>
+                <span class="dashboard-date">December 2025</span>
+            </div>
+            <table class="dashboard">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                        <th>Signal</th>
+                        <th>Implication</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gold ETF Flows</td>
+                        <td>+$5.2bn</td>
+                        <td><span class="signal-bullish">BULLISH</span></td>
+                        <td>Institutional Conviction</td>
+                    </tr>
+                    <tr>
+                        <td>Hodler Net Position</td>
+                        <td>-154,710 BTC</td>
+                        <td><span class="signal-bearish">BEARISH</span></td>
+                        <td>Distribution into Strength</td>
+                    </tr>
+                    <tr>
+                        <td>BTC MVRV Ratio / Z-Score</td>
+                        <td>1.64 / 1.30</td>
+                        <td><span class="signal-caution">ELEVATED</span></td>
+                        <td>Above Baseline Valuation</td>
+                    </tr>
+                    <tr>
+                        <td>Illiquid Supply</td>
+                        <td>68.6%</td>
+                        <td><span class="signal-bullish">BULLISH</span></td>
+                        <td>Long-Term Squeeze Potential</td>
+                    </tr>
+                    <tr>
+                        <td>Gold-to-Oil Ratio</td>
+                        <td>71.4</td>
+                        <td><span class="signal-neutral">DEFENSIVE</span></td>
+                        <td>Deflationary/Recessionary Hedge</td>
+                    </tr>
+                    <tr>
+                        <td>BTC/Gold Ratio</td>
+                        <td>21.64</td>
+                        <td><span class="signal-caution">ELEVATED</span></td>
+                        <td>Rotation Risk (Hist. range: 8–35)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 4: HALVING CYCLE TRACKER ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Bitcoin Supply Cycle</h2>
+            <p class="section-subtitle">Where we are in the 4-year halving cycle</p>
+        </div>
+
+        <div class="cycle-tracker">
+            <div class="cycle-header">
+                <span class="cycle-title">⛏️ Halving Cycle Position</span>
+                <span class="cycle-phase">MID-CYCLE EXPANSION</span>
+            </div>
+
+            <div class="cycle-progress">
+                <div class="cycle-progress-bar" style="width: 55%;"></div>
+            </div>
+
+            <div class="cycle-stats">
+                <div class="cycle-stat">
+                    <div class="cycle-stat-value">~600</div>
+                    <div class="cycle-stat-label">Days Since Halving</div>
+                </div>
+                <div class="cycle-stat">
+                    <div class="cycle-stat-value">~860</div>
+                    <div class="cycle-stat-label">Days Until Next</div>
+                </div>
+                <div class="cycle-stat">
+                    <div class="cycle-stat-value">55%</div>
+                    <div class="cycle-stat-label">Cycle Progress</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <p><strong>What this means:</strong> We are in the mid-cycle expansion phase—historically the period of strongest returns but also increasing distribution by early accumulators. The supply issuance has been halved, but demand signals are mixed. Monitor hodler behavior closely during this phase.</p>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 5: MARKET ANALYSIS ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Market Intelligence</h2>
+            <p class="section-subtitle">Let The Data Speak</p>
+        </div>
+
+        <div class="content-block">
+            <h3>Physical Gold (XAU) — Accumulation Phase 🟢</h3>
+            <p><strong>Trend: Bullish.</strong> Spot price (<strong>$4,277</strong>) is supported by a structural shift in flows.</p>
+            <ul>
+                <li><strong>Key Indicator:</strong> ETF Markets (+$5.2bn Inflows). After months of neutrality, Western institutional capital is flooding back into Gold products.</li>
+                <li>This aligns with sustained Central Bank purchasing activity globally.</li>
+            </ul>
+            <p><strong>Verdict:</strong> Gold is acting as the "Adult in the Room," pricing in economic deceleration (Gold/Oil Ratio 71.4) and ignoring the stronger Dollar.</p>
+        </div>
+
+        <div class="content-block">
+            <h3>Digital Gold (BTC) — Distribution Phase ⚠️</h3>
+            <p><strong>Trend: Caution.</strong> Price (<strong>$92,539</strong>) is strong, but flows are weakening.</p>
+            <ul>
+                <li><strong>Flow Signal:</strong> Hodler Net Position Change (<strong>-154,710 BTC</strong>). Long-term holders are distributing into strength.</li>
+                <li><strong>Puell Multiple:</strong> 0.97 — Miners are at <strong>neutral</strong> revenue levels; watch for deterioration below 0.8.</li>
+                <li><strong>Structural Floor:</strong> <strong>68.6%</strong> of supply remains illiquid, providing long-term stickiness even during distribution.</li>
+            </ul>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;"><em>Note: Illiquid supply (coins dormant >30 days) and LTH net position (155+ day holders) measure overlapping but distinct cohorts.</em></p>
+            <p><strong>Verdict:</strong> The network is "heavy" in terms of flow, but structurally robust. Immediate liquidity trend is net-sell side.</p>
+        </div>
+
+        <div class="content-block">
+            <h3>The Correlation Check — Strategic Divergence</h3>
+            <p>The BTC/Gold Ratio sits at <strong>21.64</strong> (historical range: ~8–35; median ~18). This is an <strong>elevated</strong> reading. We are observing a classic "Smart Money Rotation":</p>
+            <ul>
+                <li>BTC is above baseline valuation relative to its cost basis (MVRV Ratio 1.64, Z-Score 1.30)</li>
+                <li>Gold is seeing fresh capital entry from institutional players</li>
+            </ul>
+            <p><strong>Working hypothesis:</strong> The BTC/Gold ratio compresses (mean reverts) as capital rotates from high-beta digital to low-beta physical safety in the short term.</p>
+            <p><strong>Counter-hypothesis:</strong> BTC can outperform gold <em>despite</em> LTH distribution if ETF inflows + derivatives risk remain contained and adoption/demand accelerates.</p>
+            
+            <!-- BTC/Gold Ratio Chart -->
+            <div style="margin-top: 25px; border-radius: 12px; overflow: hidden; border: 1px solid var(--neutral);">
+                <div style="background-color: var(--pine); padding: 10px 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">📈 BTC/Gold Ratio — Live Chart</span>
+                    <span style="font-size: 0.75rem; color: var(--text-secondary);">Historical range: 8–35</span>
+                </div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container" style="height:350px;width:100%">
+                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                    <div class="tradingview-widget-copyright" style="font-size: 0.7rem; text-align: center; padding: 5px;">
+                        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank" style="color: var(--text-muted);">
+                            Chart by TradingView
+                        </a>
+                    </div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                        "autosize": true,
+                        "symbol": "BITSTAMP:BTCUSD/TVC:GOLD",
+                        "interval": "W",
+                        "timezone": "Etc/UTC",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "en",
+                        "backgroundColor": "rgba(44, 46, 39, 1)",
+                        "gridColor": "rgba(247, 100, 0, 0.08)",
+                        "hide_top_toolbar": true,
+                        "hide_legend": false,
+                        "allow_symbol_change": false,
+                        "save_image": false,
+                        "calendar": false,
+                        "hide_volume": true,
+                        "support_host": "https://www.tradingview.com"
+                    }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px; text-align: center;"><em>BTC/Gold Ratio (weekly). Current: ~21.64 | Median: ~18 | Watch for compression toward 15–18 range.</em></p>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 6: USD CYCLE AWARENESS ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Dollar Cycle Awareness</h2>
+            <p class="section-subtitle">Understanding the monetary environment</p>
+        </div>
+
+        <div class="usd-cycle">
+            <div class="usd-header">
+                <span class="usd-title">DXY (US Dollar Index)</span>
+                <span class="usd-value">99.09</span>
+            </div>
+            <div class="usd-interpretation">
+                <strong>Interpretation:</strong> The Dollar is testing the psychologically significant 100 level. If DXY breaks and holds above 100, both gold and Bitcoin face headwinds. However, gold's current ETF flows suggest it has the stronger shield. A strong dollar typically suppresses commodity prices, but institutional flows into gold indicate conviction beyond currency dynamics.
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 7: DCA STRATEGY ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Accumulation Framework</h2>
+            <p class="section-subtitle">Dollar-Cost Averaging strategy by timeframe</p>
+        </div>
+
+        <div class="dca-section">
+            <div class="dca-header">
+                <span class="dca-icon">📥</span>
+                <span class="dca-title">Current DCA Positioning</span>
+            </div>
+
+            <div class="strategy-grid">
+                <div class="strategy-card caution">
+                    <div class="strategy-timeframe">Short-Term (1-3mo)</div>
+                    <div class="strategy-action caution">PAUSE BTC</div>
+                    <div class="strategy-note">Hodler distribution + MVRV elevated. Favor gold.</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-timeframe">Mid-Term (3-12mo)</div>
+                    <div class="strategy-action">REDUCE BTC</div>
+                    <div class="strategy-note">Watch for Puell &lt;0.5 or MVRV &lt;1.0 for re-entry.</div>
+                </div>
+                <div class="strategy-card accumulate">
+                    <div class="strategy-timeframe">Long-Term (1-4yr)</div>
+                    <div class="strategy-action accumulate">MAINTAIN</div>
+                    <div class="strategy-note">Halving cycle intact. Illiquid supply high.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <p><em>DCA (Dollar-Cost Averaging) is a strategy of making regular, fixed-amount purchases regardless of price. Combined with on-chain cycle awareness, it becomes a powerful accumulation framework. Current conditions favor rotating DCA allocation toward gold short-term while maintaining long-term BTC positions.</em></p>
+        </div>
+    </section>
+
+    <!-- ===== ALPHA WATCHLIST ===== -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">Alpha Watchlist</h2>
+            <p class="section-subtitle">Key metrics to monitor this week</p>
+        </div>
+
+        <div class="alpha-watchlist">
+            <div class="alpha-header">
+                <span class="alpha-title">🔍 Critical Monitors</span>
+            </div>
+
+            <div class="alpha-item">
+                <span class="alpha-bullet">▸</span>
+                <div class="alpha-content">
+                    <span class="alpha-metric">Puell Multiple (0.97)</span>
+                    <div class="alpha-detail">Currently neutral. Watch for deterioration below 0.8 while price stays elevated—this would confirm miner stress.</div>
+                </div>
+            </div>
+
+            <div class="alpha-item">
+                <span class="alpha-bullet">▸</span>
+                <div class="alpha-content">
+                    <span class="alpha-metric">DXY (99.09)</span>
+                    <div class="alpha-detail">If the Dollar breaks 100, both assets face headwinds. Gold's ETF flows suggest stronger defense.</div>
+                </div>
+            </div>
+
+            <div class="alpha-item">
+                <span class="alpha-bullet">▸</span>
+                <div class="alpha-content">
+                    <span class="alpha-metric">BTC/Gold Ratio (21.64)</span>
+                    <div class="alpha-detail">Above historical median (~18). Watch for compression (mean reversion) vs. breakout continuation.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION 8: VERDICT ===== -->
+    <section class="section">
+        <div class="verdict-box">
+            <div class="verdict-label">LTDS Verdict</div>
+            <div class="verdict-text">Overweight Gold / Underweight Bitcoin (1-3 Month Timeframe)</div>
+            <div class="verdict-subtext">The "Physical" is currently bidding; the "Digital" is distributing. Like the Komodo dragon, we do not fight the environment—we adapt to it. The data has spoken.</div>
+        </div>
+    </section>
+
+    <!-- ===== DISCLAIMER ===== -->
+    <div class="disclaimer">
+        <h5>⚠️ Educational Purposes Only — Not Investment Advice</h5>
+        <p>
+            This newsletter is for educational purposes only and does not constitute investment advice. 
+            The information provided is intended to bridge understanding between physical gold and Bitcoin markets 
+            using on-chain analytics and market structure analysis. Always conduct your own research (DYOR) and 
+            consult with qualified financial advisors before making investment decisions. Past performance does 
+            not guarantee future results. Kommodo Digital is not responsible for any investment decisions made 
+            based on this content.
+        </p>
+        <p class="subjectivity-score">Subjectivity Score: 15% (Data-Driven with Strategic Interpretation)</p>
+        
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--neutral); text-align: left;">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0 0 8px;"><strong>Data Sources:</strong></p>
+            <ul style="font-size: 0.7rem; color: var(--text-muted); margin: 0; padding-left: 15px; line-height: 1.6;">
+                <li><strong>On-chain (Glassnode)</strong>: BTC price, MVRV, Puell, Hodler Net Position, Illiquid Supply, Exchange Net Position</li>
+                <li><strong>Gold (Glassnode proxy)</strong>: XAU spot price, PAXG, XAUT</li>
+                <li><strong>Gold ETF Flows</strong>: World Gold Council / Bloomberg (external)</li>
+                <li><strong>DXY</strong>: ICE U.S. Dollar Index (external)</li>
+                <li><strong>Oil (for Gold/Oil ratio)</strong>: WTI spot (external)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="newsletter-footer">
+        <div class="footer-brand">Kommodo Digital</div>
+        <div class="footer-tagline">Let The Data Speak</div>
+
+        <div class="footer-links">
+            <a href="#">Subscribe</a>
+            <a href="#">Archive</a>
+            <a href="#">About LTDS</a>
+        </div>
+
+        <div class="footer-copyright">
+            © 2025 Kommodo Digital — Los Angeles, CA<br>
+            The Digital Commodity Newsletter
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
