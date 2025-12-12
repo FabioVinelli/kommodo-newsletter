@@ -1,221 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kommodo Digital — Newsletter Archive</title>
-    <meta name="description" content="The Digital Commodity Newsletter — Let The Data Speak. On-chain intelligence at the intersection of Physical Gold and Digital Gold.">
+    <title>Kommodo Digital — The Digital Commodity Newsletter</title>
+    <meta name="description" content="Actionable intelligence at the intersection of Physical Gold and Digital Gold. Powered by the LTDS Framework — Let the Data Speak.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬢</text></svg>">
     <style>
-        :root {
-            --bg-primary: #2c2e27;
-            --bg-secondary: #33432f;
-            --accent-primary: #f76400;
-            --accent-secondary: #b24800;
-            --pine: #3c6a40;
-            --neutral: #575c4f;
-            --text-primary: #f5f5f5;
-            --text-secondary: #d0d0d0;
-            --text-muted: #888;
-        }
-        
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
+        /* ================================
+           KOMMODO DIGITAL — BRAND THEME v2
+           Tactical Palette Applied
+           ================================ */
+
+        * { box-sizing: border-box; }
+
+        /* Global Background */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            background-color: #2c2e27;
+            color: #f5f5f5;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
             line-height: 1.6;
-            min-height: 100vh;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .logo {
+
+        /* Hero Title */
+        h1.hero-title {
             font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        
-        .brand {
-            font-size: 2rem;
             font-weight: 700;
-            color: var(--accent-primary);
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            color: #f5f5f5;
+            margin-bottom: 0.2em;
+            text-align: center;
         }
-        
-        .tagline {
-            color: var(--text-muted);
-            font-size: 1rem;
+
+        /* Subtitle */
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #d0d0d0;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        /* Value Statement Centered */
+        .value-statement {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* PRIMARY CTA — bright signal orange */
+        a.button.primary {
+            background-color: #f76400;
+            color: #ffffff;
+            border-radius: 6px;
+            padding: 12px 24px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            margin: 5px 10px;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        a.button.primary:hover {
+            background-color: #e55b00;
+            transform: translateY(-2px);
+        }
+
+        /* SECONDARY CTA — deeper burnt orange */
+        a.button.secondary {
+            background-color: #b24800;
+            color: #ffffff;
+            border-radius: 6px;
+            padding: 12px 24px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            margin: 5px 10px;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        a.button.secondary:hover {
+            background-color: #993d00;
+            transform: translateY(-2px);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Hero Image Container */
+        .hero-image-container {
+            width: 100%;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #2c2e27, #33432f);
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #3c6a40;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Section Headers */
+        .section-title {
+            border-left: 4px solid #b24800;
+            padding-left: 12px;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection-title {
+            color: #f76400;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Notes Tag */
+        .tag {
+            background-color: #33432f;
+            color: #ffffff;
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Dashboard Table */
+        table.dashboard {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #33432f;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+            font-size: 0.9rem;
+        }
+
+        table.dashboard th {
+            background-color: #3c6a40;
+            color: #ffffff;
+            padding: 12px 15px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        table.dashboard td {
+            border-bottom: 1px solid #575c4f;
+            padding: 10px 15px;
+        }
+
+        table.dashboard tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Video Container */
+        .kommodo-video {
+            border-radius: 12px;
+            background-color: #33432f;
+            border: 1px solid #3c6a40;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            margin-bottom: 2rem;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background-color: #f76400;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(247, 100, 0, 0.4);
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 18px solid white;
+            margin-left: 4px;
+        }
+
+        /* Links */
+        a {
+            color: #f76400;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #b24800;
+            text-decoration: underline;
+        }
+
+        /* Signal Colors */
+        .bg-bullish {
+            background-color: #3c6a40;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .bg-bearish {
+            background-color: #b24800;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .bg-neutral {
+            background-color: #575c4f;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .bg-elevated {
+            background-color: #8b5a00;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        /* Blockquote */
+        blockquote {
+            border-left: 4px solid #f76400;
+            margin: 1.5em 0;
+            padding: 1em 1.5em;
+            background-color: #33432f;
+            color: #d0d0d0;
             font-style: italic;
+            border-radius: 0 8px 8px 0;
         }
-        
-        h1 {
-            font-size: 1.8rem;
-            color: var(--text-primary);
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--neutral);
+
+        hr {
+            border: none;
+            border-top: 1px solid #575c4f;
+            margin: 3rem 0;
+            opacity: 0.5;
         }
-        
-        .editions-list {
-            list-style: none;
-        }
-        
-        .edition-item {
-            background: var(--bg-secondary);
+
+        /* Latest Edition Card */
+        .edition-card {
+            background: linear-gradient(135deg, #33432f 0%, #3c6a40 100%);
             border-radius: 12px;
             padding: 25px 30px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--accent-primary);
+            margin: 2rem 0;
+            border-left: 4px solid #f76400;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-        
-        .edition-item:hover {
+
+        .edition-card:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
-        
-        .edition-link {
+
+        .edition-card a {
             text-decoration: none;
             color: inherit;
-            display: block;
         }
-        
+
         .edition-number {
             font-size: 0.8rem;
-            color: var(--accent-primary);
+            color: #f76400;
             font-weight: 600;
             letter-spacing: 1px;
             margin-bottom: 5px;
         }
-        
+
         .edition-title {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 10px;
+            color: #ffffff;
+            margin-bottom: 8px;
         }
-        
+
         .edition-subtitle {
             font-size: 0.95rem;
-            color: var(--text-secondary);
-            margin-bottom: 15px;
+            color: #d0d0d0;
+            margin-bottom: 12px;
         }
-        
+
         .edition-meta {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: #888;
+            flex-wrap: wrap;
         }
-        
-        .edition-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
+
+        /* Footer */
         .footer {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 50px;
             padding-top: 30px;
-            border-top: 1px solid var(--neutral);
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            border-top: 1px solid #575c4f;
+            color: #888;
         }
-        
-        .footer a {
-            color: var(--accent-primary);
-            text-decoration: none;
+
+        .footer-links {
+            margin-top: 15px;
         }
-        
-        .footer a:hover {
-            text-decoration: underline;
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #f76400;
         }
-        
-        .cta-box {
-            background: linear-gradient(135deg, var(--pine) 0%, var(--bg-secondary) 100%);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .cta-box h3 {
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }
-        
-        .cta-box p {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: var(--accent-primary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-        
-        .cta-button:hover {
-            background: var(--accent-secondary);
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            h1.hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1rem; }
+            body { padding: 20px 15px; }
+            .button-container { display: flex; flex-direction: column; gap: 10px; }
+            a.button.primary, a.button.secondary { margin: 0; width: 100%; text-align: center; }
+            .edition-meta { flex-direction: column; gap: 5px; }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">⬢</div>
-            <div class="brand">KOMMODO DIGITAL</div>
-            <div class="tagline">The Digital Commodity Newsletter — Let The Data Speak</div>
-        </header>
-        
-        <h1>📰 Newsletter Archive</h1>
-        
-        <ul class="editions-list">
-            <li class="edition-item">
-                <a href="editions/great-rotation.html" class="edition-link">
-                    <div class="edition-number">EDITION #001</div>
-                    <div class="edition-title">The Great Rotation: Banks Buy, Hodlers Sell</div>
-                    <div class="edition-subtitle">Gold Inflows vs. Bitcoin Distribution: A Tale of Two Commodities</div>
-                    <div class="edition-meta">
-                        <span>📅 December 11, 2025</span>
-                        <span>⏱️ 6 min read</span>
-                        <span>📊 LTDS Framework</span>
-                    </div>
-                </a>
-            </li>
-            <!-- Future editions will be added here -->
-        </ul>
-        
-        <div class="cta-box">
-            <h3>Subscribe to Kommodo Digital</h3>
-            <p>Get on-chain intelligence delivered to your inbox. No spam, just data.</p>
-            <a href="https://kommodo.io" class="cta-button">Visit Kommodo.io →</a>
-        </div>
-        
-        <footer class="footer">
-            <p>© 2025 Kommodo Digital — Los Angeles, CA</p>
-            <p style="margin-top: 10px;">
-                <a href="https://kommodo.io">Main Site</a> · 
-                <a href="https://substack.com/@kommododigital">Substack</a>
-            </p>
-        </footer>
+
+    <!-- SECTION A — HERO BLOCK -->
+    <h1 class="hero-title">⬢ Kommodo Digital</h1>
+    <p class="hero-subtitle">The Digital Commodity Newsletter</p>
+
+    <div class="value-statement">
+        Actionable intelligence at the intersection of <strong>Physical Gold</strong> and <strong>Digital Gold</strong>.<br>
+        Powered by the <strong>LTDS Framework</strong> — Let the Data Speak.
     </div>
+
+    <div class="button-container">
+        <a href="https://kommodo.substack.com/subscribe" class="button primary">Subscribe Free</a>
+        <a href="https://kommodo.substack.com/about" class="button secondary">Learn More</a>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image-container">
+        <img src="images/hero-image.png" alt="The Digital Commodity Nexus - Kommodo Digital">
+    </div>
+
+    <hr>
+
+    <!-- LATEST EDITION -->
+    <h2 class="section-title">📰 LATEST EDITION</h2>
+
+    <div class="edition-card">
+        <a href="editions/great-rotation.html">
+            <div class="edition-number">EDITION #001 — DECEMBER 2025</div>
+            <div class="edition-title">The Great Rotation: Banks Buy, Hodlers Sell</div>
+            <div class="edition-subtitle">Gold Inflows vs. Bitcoin Distribution: A Tale of Two Commodities</div>
+            <div class="edition-meta">
+                <span>📅 December 11, 2025</span>
+                <span>⏱️ 6 min read</span>
+                <span>📊 LTDS Framework Analysis</span>
+            </div>
+        </a>
+    </div>
+
+    <blockquote>
+        <strong>Key Insight:</strong> The "Official Sector" (Central Banks) is bidding Physical Gold, while the "Network Sector" (Miners & Hodlers) is distributing Digital Gold. A classic Smart Money Rotation is underway.
+    </blockquote>
+
+    <hr>
+
+    <!-- START HERE -->
+    <h2 class="section-title">🚀 START HERE</h2>
+
+    <!-- LTDS Framework -->
+    <h3 class="subsection-title">⬢ The LTDS Framework</h3>
+    <p>A four-pillar intelligence engine designed to filter noise and extract signal.</p>
+
+    <!-- Framework Diagram Image -->
+    <div style="text-align: center; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3); border: 1px solid #3c6a40;">
+        <img src="images/ltds-framework.png" alt="LTDS Framework Diagram" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <blockquote>
+        <strong>Let The Data Speak →</strong><br>
+        Bias-free intelligence at the intersection of Physical Gold and Digital Gold.
+    </blockquote>
+
+    <hr>
+
+    <!-- SIGNALS DASHBOARD -->
+    <h2 class="section-title">📊 SIGNALS DASHBOARD</h2>
+    <p>Live market intelligence — Updated Dec 11, 2025</p>
+
+    <table class="dashboard">
+        <thead>
+            <tr>
+                <th>METRIC</th>
+                <th>VALUE</th>
+                <th>SIGNAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gold ETF Flows</td>
+                <td>+$5.2bn</td>
+                <td><span class="bg-bullish">BULLISH</span></td>
+            </tr>
+            <tr>
+                <td>Hodler Net Position</td>
+                <td>-154,710 BTC</td>
+                <td><span class="bg-bearish">BEARISH</span></td>
+            </tr>
+            <tr>
+                <td>BTC MVRV / Z-Score</td>
+                <td>1.64 / 1.30</td>
+                <td><span class="bg-elevated">ELEVATED</span></td>
+            </tr>
+            <tr>
+                <td>Illiquid Supply</td>
+                <td>68.6%</td>
+                <td><span class="bg-bullish">BULLISH</span></td>
+            </tr>
+            <tr>
+                <td>BTC/Gold Ratio</td>
+                <td>21.64</td>
+                <td><span class="bg-elevated">ELEVATED</span></td>
+            </tr>
+            <tr>
+                <td>Gold-to-Oil Ratio</td>
+                <td>71.4</td>
+                <td><span class="bg-neutral">DEFENSIVE</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="editions/great-rotation.html" class="button primary">Read Full Analysis →</a>
+    </div>
+
+    <hr>
+
+    <!-- CONTENT TYPES -->
+    <h2 class="section-title">📚 WHAT YOU GET</h2>
+
+    <h3 class="subsection-title">Weekly Market Briefings</h3>
+    <p>Every Monday — On-chain metrics, gold flows, DXY positioning, and DCA strategy recommendations.</p>
+
+    <h3 class="subsection-title" style="color: #b24800;">🟧 Deep Dives — LTDS Intelligence Series</h3>
+    <p>Long-form analysis for serious allocators. Market structure, rotation dynamics, allocation frameworks.</p>
+
+    <h3 class="subsection-title">Kommodo Notes <span class="tag">#NOTES</span></h3>
+    <p>Rapid-fire updates on market structure changes and metric alerts.</p>
+
+    <hr>
+
+    <!-- SUBSCRIBE CTA -->
+    <div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #33432f 0%, #2c2e27 100%); border-radius: 12px; margin: 2rem 0;">
+        <h3 style="color: #f76400; margin-bottom: 10px;">Subscribe to Kommodo Digital</h3>
+        <p style="color: #d0d0d0; margin-bottom: 20px;">Get on-chain intelligence delivered to your inbox. No spam, just data.</p>
+        <a href="https://kommodo.substack.com/subscribe" class="button primary">Subscribe Free →</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><strong>Kommodo Digital</strong><br>
+        Los Angeles, CA</p>
+        <p style="font-size: 0.85em; margin-top: 10px;">© 2025 Kommodo Digital. Let the data speak.</p>
+        <div class="footer-links">
+            <a href="https://kommodo.substack.com">Substack</a>
+            <a href="https://kommodo.io">Main Site</a>
+            <a href="editions/great-rotation.html">Latest Edition</a>
+        </div>
+    </div>
+
 </body>
+
 </html>
