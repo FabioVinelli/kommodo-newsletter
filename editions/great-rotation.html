@@ -97,7 +97,8 @@
 
         /* ===== SECTION STYLING ===== */
         .section {
-            margin: 40px 0;
+            margin: 60px 0;
+            padding-bottom: 20px;
         }
 
         .section-header {
@@ -147,7 +148,7 @@
             background-color: var(--bg-secondary);
             border-radius: 12px;
             padding: 25px;
-            margin: 30px 0;
+            margin: 40px 0;
             border: 1px solid var(--neutral);
         }
 
@@ -481,7 +482,7 @@
 
         /* ===== CONTENT BLOCKS ===== */
         .content-block {
-            margin: 25px 0;
+            margin: 35px 0;
         }
 
         .content-block h3 {
@@ -606,22 +607,28 @@
         .disclaimer {
             background-color: rgba(0, 0, 0, 0.3);
             border-radius: 8px;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.8rem;
+            padding: 20px 25px;
+            margin-top: 60px;
+            font-size: 0.7rem;
             color: var(--text-muted);
-            text-align: center;
+            text-align: left;
+            line-height: 1.7;
         }
 
         .disclaimer h5 {
             color: var(--accent-secondary);
-            margin: 0 0 10px;
-            font-size: 0.85rem;
+            margin: 0 0 15px;
+            font-size: 0.75rem;
+            text-align: center;
         }
 
         .disclaimer p {
-            margin: 0;
-            line-height: 1.6;
+            margin: 0 0 12px;
+            line-height: 1.7;
+        }
+
+        .disclaimer p:last-of-type {
+            margin-bottom: 0;
         }
 
         /* ===== FOOTER ===== */
@@ -711,9 +718,6 @@
             <span class="meta-item">📅 December 11, 2025</span>
             <span class="meta-item">📊 Edition #001</span>
             <span class="meta-item">⏱️ 6 min read</span>
-        </div>
-        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">
-            <strong>Data Snapshot:</strong> Glassnode UTC close · Dec 11, 2025
         </div>
     </header>
 
@@ -1078,31 +1082,6 @@
         </div>
     </section>
 
-    <!-- ===== DISCLAIMER ===== -->
-    <div class="disclaimer">
-        <h5>⚠️ Educational Purposes Only — Not Investment Advice</h5>
-        <p>
-            This newsletter is for educational purposes only and does not constitute investment advice. 
-            The information provided is intended to bridge understanding between physical gold and Bitcoin markets 
-            using on-chain analytics and market structure analysis. Always conduct your own research (DYOR) and 
-            consult with qualified financial advisors before making investment decisions. Past performance does 
-            not guarantee future results. Kommodo Digital is not responsible for any investment decisions made 
-            based on this content.
-        </p>
-        <p class="subjectivity-score">Subjectivity Score: 15% (Data-Driven with Strategic Interpretation)</p>
-        
-        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--neutral); text-align: left;">
-            <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0 0 8px;"><strong>Data Sources:</strong></p>
-            <ul style="font-size: 0.7rem; color: var(--text-muted); margin: 0; padding-left: 15px; line-height: 1.6;">
-                <li><strong>On-chain (Glassnode)</strong>: BTC price, MVRV, Puell, Hodler Net Position, Illiquid Supply, Exchange Net Position</li>
-                <li><strong>Gold (Glassnode proxy)</strong>: XAU spot price, PAXG, XAUT</li>
-                <li><strong>Gold ETF Flows</strong>: World Gold Council / Bloomberg (external)</li>
-                <li><strong>DXY</strong>: ICE U.S. Dollar Index (external)</li>
-                <li><strong>Oil (for Gold/Oil ratio)</strong>: WTI spot (external)</li>
-            </ul>
-        </div>
-    </div>
-
     <!-- ===== FOOTER ===== -->
     <footer class="newsletter-footer">
         <div class="footer-brand">Kommodo Digital</div>
@@ -1119,6 +1098,32 @@
             The Digital Commodity Newsletter
         </div>
     </footer>
+
+    <!-- ===== DISCLAIMER (Bottom) ===== -->
+    <div class="disclaimer">
+        <h5>⚠️ Informational & Educational Purposes Only — Not Investment Advice</h5>
+        
+        <p>This publication is provided for general informational and educational purposes only and does not constitute investment, financial, or trading advice, nor an offer, solicitation, or recommendation to buy or sell any asset or security.</p>
+        
+        <p>Content is not personalized and does not consider individual financial circumstances or objectives. Analysis of Bitcoin, gold, on-chain data, or market structure reflects general research and strategic interpretation, not prescriptive guidance. Kommodo Digital is not a registered investment advisor or fiduciary, and no advisory relationship is formed.</p>
+        
+        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--neutral);">
+            <p style="margin-bottom: 10px;"><strong>Data Sources:</strong></p>
+            <ul style="margin: 0 0 15px; padding-left: 20px; line-height: 1.8;">
+                <li><strong>On-chain (Glassnode)</strong>: BTC price, MVRV, Puell, Hodler Net Position, Illiquid Supply, Exchange Net Position</li>
+                <li><strong>Gold (Glassnode proxy)</strong>: XAU spot price, PAXG, XAUT</li>
+                <li><strong>Gold ETF Flows</strong>: World Gold Council / Bloomberg (external)</li>
+                <li><strong>DXY</strong>: ICE U.S. Dollar Index (external)</li>
+                <li><strong>Oil (for Gold/Oil ratio)</strong>: WTI spot (external)</li>
+            </ul>
+        </div>
+        
+        <p>Charts, data, and models are for illustrative purposes only. Certain statements may be forward-looking and based on current assumptions and market conditions, which are subject to change. No representation or warranty is made regarding accuracy or completeness, including information sourced from third parties.</p>
+        
+        <p>Digital assets and commodities involve significant risk, including loss of principal. Past performance is not indicative of future results. You are solely responsible for your decisions. Kommodo Digital disclaims all liability for actions taken based on this content.</p>
+        
+        <p style="text-align: center; margin-top: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;">Subjectivity Indicator: ~15% (Primarily data-driven; non-predictive, non-prescriptive.)</p>
+    </div>
 
 </body>
 
